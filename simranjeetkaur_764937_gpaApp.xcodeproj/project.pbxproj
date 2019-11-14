@@ -15,6 +15,7 @@
 		D0ED6833237CFD01003486EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0ED6831237CFD01003486EE /* LaunchScreen.storyboard */; };
 		D0ED683E237CFD01003486EE /* simranjeetkaur_764937_gpaAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED683D237CFD01003486EE /* simranjeetkaur_764937_gpaAppTests.swift */; };
 		D0ED6849237CFD01003486EE /* simranjeetkaur_764937_gpaAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED6848237CFD01003486EE /* simranjeetkaur_764937_gpaAppUITests.swift */; };
+		D0ED6857237D0001003486EE /* studentnametableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED6856237D0001003486EE /* studentnametableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D0ED6844237CFD01003486EE /* simranjeetkaur_764937_gpaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simranjeetkaur_764937_gpaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED6848237CFD01003486EE /* simranjeetkaur_764937_gpaAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simranjeetkaur_764937_gpaAppUITests.swift; sourceTree = "<group>"; };
 		D0ED684A237CFD01003486EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0ED6856237D0001003486EE /* studentnametableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentnametableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				D0ED682F237CFD01003486EE /* Assets.xcassets */,
 				D0ED6831237CFD01003486EE /* LaunchScreen.storyboard */,
 				D0ED6834237CFD01003486EE /* Info.plist */,
+				D0ED6856237D0001003486EE /* studentnametableTableViewController.swift */,
 			);
 			path = simranjeetkaur_764937_gpaApp;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				D0ED682B237CFCFF003486EE /* ViewController.swift in Sources */,
 				D0ED6827237CFCFF003486EE /* AppDelegate.swift in Sources */,
 				D0ED6829237CFCFF003486EE /* SceneDelegate.swift in Sources */,
+				D0ED6857237D0001003486EE /* studentnametableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
