@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0015A36237F1B8300EDB0E5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0015A35237F1B8300EDB0E5 /* File.swift */; };
+		D00AD354237EEB580017CAA4 /* gpacalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */; };
 		D0ED6827237CFCFF003486EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED6826237CFCFF003486EE /* AppDelegate.swift */; };
 		D0ED6829237CFCFF003486EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED6828237CFCFF003486EE /* SceneDelegate.swift */; };
-		D0ED682B237CFCFF003486EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED682A237CFCFF003486EE /* ViewController.swift */; };
+		D0ED682B237CFCFF003486EE /* studentregistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED682A237CFCFF003486EE /* studentregistrationViewController.swift */; };
 		D0ED682E237CFCFF003486EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0ED682C237CFCFF003486EE /* Main.storyboard */; };
 		D0ED6830237CFD01003486EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0ED682F237CFD01003486EE /* Assets.xcassets */; };
 		D0ED6833237CFD01003486EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0ED6831237CFD01003486EE /* LaunchScreen.storyboard */; };
@@ -36,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0015A35237F1B8300EDB0E5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpacalculationViewController.swift; sourceTree = "<group>"; };
 		D0ED6823237CFCFF003486EE /* simranjeetkaur_764937_gpaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simranjeetkaur_764937_gpaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED6826237CFCFF003486EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0ED6828237CFCFF003486EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0ED682A237CFCFF003486EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0ED682A237CFCFF003486EE /* studentregistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentregistrationViewController.swift; sourceTree = "<group>"; };
 		D0ED682D237CFCFF003486EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0ED682F237CFD01003486EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0ED6832237CFD01003486EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 		D0ED681A237CFCFE003486EE = {
 			isa = PBXGroup;
 			children = (
+				D0015A35237F1B8300EDB0E5 /* File.swift */,
+				D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */,
 				D0ED6825237CFCFF003486EE /* simranjeetkaur_764937_gpaApp */,
 				D0ED683C237CFD01003486EE /* simranjeetkaur_764937_gpaAppTests */,
 				D0ED6847237CFD01003486EE /* simranjeetkaur_764937_gpaAppUITests */,
@@ -103,7 +109,7 @@
 			children = (
 				D0ED6826237CFCFF003486EE /* AppDelegate.swift */,
 				D0ED6828237CFCFF003486EE /* SceneDelegate.swift */,
-				D0ED682A237CFCFF003486EE /* ViewController.swift */,
+				D0ED682A237CFCFF003486EE /* studentregistrationViewController.swift */,
 				D0ED682C237CFCFF003486EE /* Main.storyboard */,
 				D0ED682F237CFD01003486EE /* Assets.xcassets */,
 				D0ED6831237CFD01003486EE /* LaunchScreen.storyboard */,
@@ -262,10 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0ED682B237CFCFF003486EE /* ViewController.swift in Sources */,
+				D0ED682B237CFCFF003486EE /* studentregistrationViewController.swift in Sources */,
+				D0015A36237F1B8300EDB0E5 /* File.swift in Sources */,
 				D0ED6827237CFCFF003486EE /* AppDelegate.swift in Sources */,
 				D0ED6829237CFCFF003486EE /* SceneDelegate.swift in Sources */,
 				D0ED6857237D0001003486EE /* studentnametableTableViewController.swift in Sources */,
+				D00AD354237EEB580017CAA4 /* gpacalculationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

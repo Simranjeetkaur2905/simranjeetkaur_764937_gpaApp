@@ -10,7 +10,7 @@ import UIKit
 
 class studentnametableTableViewController: UITableViewController {
  var currentindex = -1
-    var studentname:[String]?
+    //var studentname:[String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +31,15 @@ class studentnametableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return studentname?.count ?? 0
+        return studentname.students.count
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
                if let cell = tableView.dequeueReusableCell(withIdentifier: "studentcell"){
                  
-                   let arrayname = studentname![indexPath.row]
                   
-                   cell.textLabel?.text = arrayname
+                cell.textLabel?.text = "\(studentname.students[indexPath.row].firstname) \(studentname.students[indexPath.row].lastname)"
                        
                    //cell.imageView?.image = UIImage(named: "folder-icon")
                    // Configure the cell..
@@ -96,48 +95,19 @@ class studentnametableTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            // Get the new view controller using segue.destination.
-            // Pass the selected object to the new view controller.
-            if let detailView = segue.destination as? ViewController{
-                detailView.taskTable = self
-            if let tableviewcell = sender as?UITableViewCell{
-                   if let index = tableView.indexPath(for: tableviewcell)?.row
-                    {
-                       detailView.textString = studentname![index]
-                    currentindex = index
-                    }
-                }
-            }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    
+    if let detailView = segue.destination as? studentregistrationViewController{
+        detailView.taskTable = self
+        
             
+           }
+    
     }
     
     
-    func updateText(text: String,text1:String) {
-            
-            
-            if studentname != nil && currentindex != -1{
-                studentname![currentindex] = text
-                let indexpath = IndexPath(item: currentindex, section: 0)
-                tableView.reloadRows(at: [indexpath], with: .none)
-                currentindex = -1
-            }
-            
-            else if studentname != nil && currentindex == -1{
-            var first = studentname?.append(text)
-            tableView.reloadData()
-               
-                print(first)
-                
-                var last = studentname?.append(text1)
-                print(last)
-                
-                //UserDefaults.standard.set(text, forKey: "mynotes")
-                
-              //(first,"",last)
-                
-        }
-    }
+
 
 }
