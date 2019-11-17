@@ -8,13 +8,22 @@
 
 import UIKit
 
-class studentnametableTableViewController: UITableViewController {
+class studentnametableTableViewController: UITableViewController , UISearchBarDelegate{
  var currentindex = -1
     //var studentname:[String]?
     
+    
+    @IBOutlet var tableview: UITableView!
+    
+    @IBOutlet weak var searchbar: UISearchBar!
+    var filterdata  : [studentname]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableview.dataSource = self
+        searchbar.delegate = self
+        filterdata = studentname.students
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,25 +40,32 @@ class studentnametableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return studentname.students.count
+        return filterdata.count
     }
 
   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-               if let cell = tableView.dequeueReusableCell(withIdentifier: "studentcell"){
+                let cell = tableView.dequeueReusableCell(withIdentifier: "studentcell")
                  
                   
-                cell.textLabel?.text = "\(studentname.students[indexPath.row].firstname) \(studentname.students[indexPath.row].lastname)"
+        cell?.textLabel?.text = "\(filterdata [indexPath.row].firstname) \(filterdata[indexPath.row].lastname)"
                        
                    //cell.imageView?.image = UIImage(named: "folder-icon")
                    // Configure the cell..
-                   return cell
+        return cell!
                }
-                  return UITableViewCell()
-                   
-           }
+//                  return UITableViewCell()
+//                   
+//           }
 
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterdata = searchText.isEmpty ? studentname.students : studentname.students.filter {  (item:studentname)-> Bool in
+        let name = item.firstname + "" + item.lastname
+        return name.lowercased().contains(searchText.lowercased())
+        
+    }
+        tableview.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -105,6 +121,10 @@ class studentnametableTableViewController: UITableViewController {
             
            }
     
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        filterdata = studentname.students
+        tableview.reloadData()
     }
     
     

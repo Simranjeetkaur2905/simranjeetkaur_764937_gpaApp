@@ -13,6 +13,7 @@ class studentregistrationViewController: UIViewController {
        var taskTable: studentnametableTableViewController?
 //    var firstlastname:String?
 //    var studentnames:String?
+    
     @IBOutlet weak var firstnametext: UITextField!
     
     
@@ -34,19 +35,46 @@ class studentregistrationViewController: UIViewController {
         let studentid = self.studentidtext.text!
        // let studentsregistration = studentname(firstname: firstname, lastname: lastname , studentid: studentid)
         //studentname.students.append(studentsregistration)
-        self.firstnametext.text = nil
-        self.lastnametext.text = nil
-        self.studentidtext.text = nil
+//        self.firstnametext.text = nil
+//        self.lastnametext.text = nil
+//        self.studentidtext.text = nil
         
         
+        if firstnametext.text?.isEmpty ?? true && lastnametext.text?.isEmpty ?? true{
+            let alertempty = UIAlertController(title: "WARNING! Textfields is empty", message: "Fill the textfields", preferredStyle: .alert)
+            let okactionempty = UIAlertAction(title: "ok", style: .cancel ,handler: nil)
+            alertempty.addAction(okactionempty)
+            self.present(alertempty,animated: true,completion: nil)
+
+        }
+        else {
         
         let alertsheet = UIAlertController(title: "Save student", message: "Are you sure?", preferredStyle: .actionSheet)
         let cancel = UIAlertAction(title: "No way", style: .cancel, handler: nil)
         let oksheet = UIAlertAction(title: "Yes, I am sure", style:  .default){ (action) in
             let alertaction = UIAlertController(title: "New contact saved", message: "\(firstname) is now a student", preferredStyle: .alert)
             let okaction = UIAlertAction(title: "ok", style: .default ){(action) in
-                let studentsregistration = studentname(firstname: firstname, lastname: lastname , studentid: studentid)
-                studentname.students.append(studentsregistration)
+                //let studentsregistration = studentname(firstname: firstname, lastname: lastname , studentid: studentid)
+              //  studentname.students.append(studentsregistration)
+                var alreadyexit = false
+                for items in studentname.students{
+                    if items.studentid == studentid{
+                       
+                        
+                       alreadyexit = true
+                    break
+                    }
+                }
+                if alreadyexit{
+                    let alert = UIAlertController(title: "id taken", message: "please choose a different id", preferredStyle: .alert)
+                    let idaction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+                    alert.addAction(idaction)
+                    self.present(alert , animated: true,completion: nil)
+                }
+                else{
+                    let studentsregistration = studentname(firstname: firstname, lastname: lastname , studentid: studentid)
+                    studentname.students.append(studentsregistration)
+                }
                 
             }
             alertaction.addAction(okaction)
@@ -57,9 +85,11 @@ class studentregistrationViewController: UIViewController {
         alertsheet.addAction(oksheet)
         
         self.present(alertsheet,animated: true,completion: nil)
-        
-              
         }
+    
+        }
+    
+   
     
 
     

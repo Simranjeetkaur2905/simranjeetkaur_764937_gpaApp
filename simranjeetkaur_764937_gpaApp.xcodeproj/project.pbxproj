@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0015A36237F1B8300EDB0E5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0015A35237F1B8300EDB0E5 /* File.swift */; };
+		D0015A36237F1B8300EDB0E5 /* structfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0015A35237F1B8300EDB0E5 /* structfile.swift */; };
+		D0015A39237F4B1F00EDB0E5 /* Win.wav in Resources */ = {isa = PBXBuildFile; fileRef = D0015A38237F4B1F00EDB0E5 /* Win.wav */; };
 		D00AD354237EEB580017CAA4 /* gpacalculationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */; };
 		D0ED6827237CFCFF003486EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED6826237CFCFF003486EE /* AppDelegate.swift */; };
 		D0ED6829237CFCFF003486EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED6828237CFCFF003486EE /* SceneDelegate.swift */; };
@@ -38,7 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D0015A35237F1B8300EDB0E5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		D0015A35237F1B8300EDB0E5 /* structfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = structfile.swift; sourceTree = "<group>"; };
+		D0015A38237F4B1F00EDB0E5 /* Win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Win.wav; sourceTree = "<group>"; };
 		D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gpacalculationViewController.swift; sourceTree = "<group>"; };
 		D0ED6823237CFCFF003486EE /* simranjeetkaur_764937_gpaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simranjeetkaur_764937_gpaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0ED6826237CFCFF003486EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0015A37237F4AE500EDB0E5 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				D0015A38237F4B1F00EDB0E5 /* Win.wav */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		D0ED681A237CFCFE003486EE = {
 			isa = PBXGroup;
 			children = (
-				D0015A35237F1B8300EDB0E5 /* File.swift */,
+				D0015A37237F4AE500EDB0E5 /* audio */,
+				D0015A35237F1B8300EDB0E5 /* structfile.swift */,
 				D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */,
 				D0ED6825237CFCFF003486EE /* simranjeetkaur_764937_gpaApp */,
 				D0ED683C237CFD01003486EE /* simranjeetkaur_764937_gpaAppTests */,
@@ -242,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0ED6833237CFD01003486EE /* LaunchScreen.storyboard in Resources */,
+				D0015A39237F4B1F00EDB0E5 /* Win.wav in Resources */,
 				D0ED6830237CFD01003486EE /* Assets.xcassets in Resources */,
 				D0ED682E237CFCFF003486EE /* Main.storyboard in Resources */,
 			);
@@ -269,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0ED682B237CFCFF003486EE /* studentregistrationViewController.swift in Sources */,
-				D0015A36237F1B8300EDB0E5 /* File.swift in Sources */,
+				D0015A36237F1B8300EDB0E5 /* structfile.swift in Sources */,
 				D0ED6827237CFCFF003486EE /* AppDelegate.swift in Sources */,
 				D0ED6829237CFCFF003486EE /* SceneDelegate.swift in Sources */,
 				D0ED6857237D0001003486EE /* studentnametableTableViewController.swift in Sources */,
