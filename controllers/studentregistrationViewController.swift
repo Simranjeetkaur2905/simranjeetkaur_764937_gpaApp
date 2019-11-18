@@ -52,7 +52,7 @@ class studentregistrationViewController: UIViewController {
         let alertsheet = UIAlertController(title: "Save student", message: "Are you sure?", preferredStyle: .actionSheet)
         let cancel = UIAlertAction(title: "No way", style: .cancel, handler: nil)
         let oksheet = UIAlertAction(title: "Yes, I am sure", style:  .default){ (action) in
-            let alertaction = UIAlertController(title: "New contact saved", message: "\(firstname) is now a student", preferredStyle: .alert)
+            let alertaction = UIAlertController(title: "New student saved", message: "\(firstname) is now a student", preferredStyle: .alert)
             let okaction = UIAlertAction(title: "ok", style: .default ){(action) in
                 //let studentsregistration = studentname(firstname: firstname, lastname: lastname , studentid: studentid)
               //  studentname.students.append(studentsregistration)

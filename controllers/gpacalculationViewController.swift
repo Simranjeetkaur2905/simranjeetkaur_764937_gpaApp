@@ -16,6 +16,12 @@ class gpacalculationViewController: UIViewController {
     var grade:Character?
     var creditscore:Double = 0.0
     var bombSoundEffect: AVAudioPlayer?
+    var cgpa:Double = 0.0
+    
+    var firstsem:Double = 0.0
+    var secondsem:Double = 0.0
+    var thirdsem:Double = 0.0
+    
     
     @IBOutlet weak var course1: UITextField!
     
@@ -38,6 +44,9 @@ class gpacalculationViewController: UIViewController {
     @IBOutlet weak var resultlabel: UILabel!
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +54,20 @@ class gpacalculationViewController: UIViewController {
         var subjectmark:Double? = Double(course1.text!)
         self.course1.becomeFirstResponder()
         self.course2.becomeFirstResponder()
+        MADT3004.isHidden = false
+        MADT3463.isHidden = false
+        MADT3125.isHidden = false
+        MADT3115.isHidden = false
+        MADT2303.isHidden = false
+        course1.isHidden = false
+        course2.isHidden = false
+        course3.isHidden = false
+        course4.isHidden = false
+        course5.isHidden = false
+//        var totalCgpa = (firstsem + secondsem + thirdsem)
+//        totalCgpa = totalCgpa/3
+//        print(totalCgpa)
+        
     }
     
     func gpaofeachsubject(marks:Double){
@@ -52,13 +75,9 @@ class gpacalculationViewController: UIViewController {
         //var fourPointScale:Double
         switch (marks) {
             case 0..<50:
-               // standardGPALabel.textColor = .black
-               // letterGradeLabel.textColor = .black
-                creditofeach = 0.0
-                //letter = "F"
+          creditofeach = 0.0
+       
             case 50...59:
-//                standardGPALabel.textColor = .red
-//                letterGradeLabel.textColor = .red
                 creditofeach = 1.0
                // letter = "D"
             case 60...62:
@@ -113,13 +132,7 @@ class gpacalculationViewController: UIViewController {
        creditscore = credithours * creditofeach
     }
     
-    
-    
-    
-    
-    
-    
-    
+  
     
     @IBAction func calculategpa(_ sender: UIButton) {
         
@@ -145,39 +158,42 @@ class gpacalculationViewController: UIViewController {
         var hours = creditofeach
         
         var sum = creditofeach + 0
-        print("sum is \(sum)")
+       // print("sum is \(sum)")
         //credithours = 3
-        print(creditofeach)
+       // print(creditofeach)
         //print(creditscore)
-        var subjectmark2:Double? = Double(course2.text!)
+            let subjectmark2:Double? = Double(course2.text!)
         let c2 =   gpaofeachsubject(marks: subjectmark2 ?? 0)
         sum = creditofeach + sum
-        print(creditofeach)
-         print("sum is \(sum)")
-        var subjectmark3:Double? = Double(course3.text!)
+       // print(creditofeach)
+         //print("sum is \(sum)")
+            let subjectmark3:Double? = Double(course3.text!)
         let c3 = gpaofeachsubject(marks: subjectmark3 ?? 0)
         sum = creditofeach + sum
-        print(creditofeach)
-         print("sum is \(sum)")
-        var subjectmark4:Double? = Double(course4.text!)
+       // print(creditofeach)
+        // print("sum is \(sum)")
+            let subjectmark4:Double? = Double(course4.text!)
        let c4 =  gpaofeachsubject(marks: subjectmark4 ?? 0)
-        print(creditofeach)
+       // print(creditofeach)
        sum = creditofeach + sum
-         print("sum is \(sum)")
+         //print("sum is \(sum)")
         
-        var subjectmark5:Double? = Double(course5.text!)
+            let subjectmark5:Double? = Double(course5.text!)
        
       let c5 =   gpaofeachsubject(marks: subjectmark5 ?? 0)
-        print(creditofeach)
+        //print(creditofeach)
         sum = creditofeach + sum
-         print("sum is \(sum)")
+        // print("sum is \(sum)")
         
         //var totalcredit = creditofeach + creditofeach + creditofeach + creditofeach + creditofeach
-        print(sum)
+        //print(sum)
         
-        var cgpa = sum / 5
+             cgpa = sum / 5
         print(cgpa)
+            
          resultlabel.text!  = String(Float(cgpa))
+            
+        
         if cgpa >= 2.8 {
             let path = Bundle.main.path(forResource: "Win.wav", ofType:nil)!
             let url = URL(fileURLWithPath: path)
@@ -190,6 +206,89 @@ class gpacalculationViewController: UIViewController {
             }
             }
         }
+    }
+    
+    @IBAction func semesterselector(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex{
+        case 0:
+            MADT3004.isHidden = false
+            MADT3463.isHidden = false
+            MADT3125.isHidden = false
+            MADT3115.isHidden = false
+            MADT2303.isHidden = false
+            MADT3004.text = "MADT3004"
+            MADT3463.text = "MADT3463"
+            MADT3125.text = "MADT3125"
+            MADT3115.text = "MADT3115"
+            MADT2303.text = "MADT2303"
+            course1.isHidden = false
+            course2.isHidden = false
+            course3.isHidden = false
+            course4.isHidden = false
+            course5.isHidden = false
+            resultlabel.text = "ex"
+            resultlabel.text!  = String(Float(cgpa))
+            firstsem = Double(resultlabel.text!)!
+            print(firstsem)
+            
+        case 1:
+            MADT3004.isHidden = false
+            MADT3463.isHidden = false
+            MADT3125.isHidden = false
+            MADT3115.isHidden = false
+            MADT2303.isHidden = false
+            MADT3004.text = "coures1 of sem2"
+            MADT3463.text = "coures2 of sem2"
+            MADT3125.text = "coures3 of sem2"
+            MADT3115.text = "coures4 of sem2"
+            MADT2303.text = "coures5 of sem2"
+            course1.isHidden = false
+            course2.isHidden = false
+            course3.isHidden = false
+            course4.isHidden = false
+            course5.isHidden = false
+            resultlabel.text = "result 2"
+            resultlabel.text!  = String(Float(cgpa))
+            secondsem = Double(resultlabel.text!)!
+            print(secondsem)
+            
+        case 2:
+            MADT3004.isHidden = false
+            MADT3463.isHidden = false
+            MADT3125.isHidden = false
+            MADT3115.isHidden = false
+            MADT2303.isHidden = false
+            MADT3004.text = "coures1 of sem3"
+            MADT3463.text = "coures2 of sem3"
+            MADT3125.text = "coures3 of sem3"
+            MADT3115.text = "coures4 of sem3"
+            MADT2303.text = "coures5 of sem3"
+            course1.isHidden = false
+            course2.isHidden = false
+            course3.isHidden = false
+            course4.isHidden = false
+            course5.isHidden = false
+            resultlabel.text = "result 3"
+            resultlabel.text!  = String(Float(cgpa))
+            thirdsem = Double(resultlabel.text!)!
+       print(thirdsem)
+            
+        default:
+         MADT3004.isHidden = true
+            MADT3463.isHidden = true
+            MADT3125.isHidden = true
+            MADT3115.isHidden = true
+            MADT2303.isHidden = true
+            course1.isHidden = true
+            course2.isHidden = true
+            course3.isHidden = true
+            course4.isHidden = true
+            course5.isHidden = true
+        
+        
+        }
+        
     }
     
     /*

@@ -92,12 +92,22 @@
 			path = audio;
 			sourceTree = "<group>";
 		};
+		D0023DF42382120E003A6887 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED6856237D0001003486EE /* studentnametableTableViewController.swift */,
+				D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */,
+				D0ED682A237CFCFF003486EE /* studentregistrationViewController.swift */,
+				D0015A35237F1B8300EDB0E5 /* structfile.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		D0ED681A237CFCFE003486EE = {
 			isa = PBXGroup;
 			children = (
+				D0023DF42382120E003A6887 /* controllers */,
 				D0015A37237F4AE500EDB0E5 /* audio */,
-				D0015A35237F1B8300EDB0E5 /* structfile.swift */,
-				D00AD353237EEB580017CAA4 /* gpacalculationViewController.swift */,
 				D0ED6825237CFCFF003486EE /* simranjeetkaur_764937_gpaApp */,
 				D0ED683C237CFD01003486EE /* simranjeetkaur_764937_gpaAppTests */,
 				D0ED6847237CFD01003486EE /* simranjeetkaur_764937_gpaAppUITests */,
@@ -120,12 +130,10 @@
 			children = (
 				D0ED6826237CFCFF003486EE /* AppDelegate.swift */,
 				D0ED6828237CFCFF003486EE /* SceneDelegate.swift */,
-				D0ED682A237CFCFF003486EE /* studentregistrationViewController.swift */,
 				D0ED682C237CFCFF003486EE /* Main.storyboard */,
 				D0ED682F237CFD01003486EE /* Assets.xcassets */,
 				D0ED6831237CFD01003486EE /* LaunchScreen.storyboard */,
 				D0ED6834237CFD01003486EE /* Info.plist */,
-				D0ED6856237D0001003486EE /* studentnametableTableViewController.swift */,
 			);
 			path = simranjeetkaur_764937_gpaApp;
 			sourceTree = "<group>";

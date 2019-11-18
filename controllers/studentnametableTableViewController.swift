@@ -10,25 +10,16 @@ import UIKit
 
 class studentnametableTableViewController: UITableViewController , UISearchBarDelegate{
  var currentindex = -1
-    //var studentname:[String]?
-    
-    
     @IBOutlet var tableview: UITableView!
     
     @IBOutlet weak var searchbar: UISearchBar!
     var filterdata  : [studentname]!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.dataSource = self
         searchbar.delegate = self
         filterdata = studentname.students
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -49,6 +40,7 @@ class studentnametableTableViewController: UITableViewController , UISearchBarDe
                  
                   
         cell?.textLabel?.text = "\(filterdata [indexPath.row].firstname) \(filterdata[indexPath.row].lastname)"
+        
                        
                    //cell.imageView?.image = UIImage(named: "folder-icon")
                    // Configure the cell..
